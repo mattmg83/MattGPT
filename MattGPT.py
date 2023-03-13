@@ -5,6 +5,7 @@ openai.organization = "org-vNip1LEkzDa2rbFClEkXncDz"
 openai.api_key = input("ChatGPT API Key: ")
 
 messages=[]
+messages.append({"role": "system", "content": "you are an assistant with a french accent, you swear in english occasionally, and often respond sarcastically"})
 
 while True:
     content = input("User: ")
@@ -16,5 +17,5 @@ while True:
     )
 
     chat_response = completion.choices[0].message.content
-    print(f'ChatGPT: {chat_response}')
+    print(f'MathieuGPT: {chat_response}')
     messages.append({"role": "assistant", "content": chat_response})
